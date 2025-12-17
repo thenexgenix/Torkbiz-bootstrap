@@ -1,5 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import Navbar from "@/components/common/Navbar";
+import Script from "next/script";
+// import "@/styles/sass/vendors/style.scss";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,8 +22,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* CSS files*/}
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/aos.css" />
+        <link rel="stylesheet" href="/css/all.min.css" />
+        <link rel="stylesheet" href="/css/lightcase.css" />
+        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+      </head>
+
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Navbar />
         {children}
+
+        {/* JS from public */}
+        <Script
+          src="/js/bootstrap.bundle.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script src="/js/aos.js" strategy="afterInteractive" />
+        <Script src="/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );
