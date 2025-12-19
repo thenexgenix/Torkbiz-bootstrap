@@ -1,10 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function BlogCard({ blog, aosDelay = 800 }) {
+export default function BlogCard({
+  blog,
+  aosDelay = 800,
+  columnClass = "col-sm-6 col-lg-4", // default for grid page
+}) {
   return (
     <div
-      className="col-sm-6 col-lg-4"
+      className={columnClass}
       data-aos="fade-up"
       data-aos-duration={aosDelay}
     >
@@ -17,6 +21,7 @@ export default function BlogCard({ blog, aosDelay = 800 }) {
               width={400}
               height={260}
               className="w-100"
+              style={{ height: "auto" }} // MATCH HTML image behavior
             />
           </div>
 
@@ -27,7 +32,7 @@ export default function BlogCard({ blog, aosDelay = 800 }) {
               </span>
             </div>
 
-            <h5>
+            <h5 className="10">
               <Link href={`/blogs/${blog.slug}`}>
                 {blog.title}
               </Link>
