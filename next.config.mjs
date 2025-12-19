@@ -2,7 +2,7 @@
 const nextConfig = {
   reactCompiler: true,
   sassOptions: {
-    quietDeps: true, // silences vendor Sass warnings
+    quietDeps: true, 
   },
 };
 

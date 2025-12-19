@@ -1,3 +1,17 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import {
+  ArrowRight,
+  Play,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Twitter,
+} from "lucide-react";
+
 export default function Hero() {
   return (
     <section
@@ -21,59 +35,69 @@ export default function Hero() {
                   their earnings by the help of tradingo through online.
                 </p>
                 <div className="banner__content-btngroup">
-                  <a
-                    href="/signin.html"
+                  <Link
+                    href="/signin"
                     className="trk-btn trk-btn--border trk-btn--primary1 trk-btn--arrow"
                   >
                     Get Started{" "}
                     <span>
-                      <i className="fa-solid fa-arrow-right"></i>
+                      <ArrowRight />
                     </span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.youtube.com/watch?v=uJSgaPIvgKk"
                     className="playbtn"
                     data-fslightbox
+                    target="_blank"
                   >
                     <span className="playbtn__thumb">
-                      <i className="fa-solid fa-play"></i>
+                      <Play fill="currentColor" size={20} />
                     </span>
                     <span className="playbtn__content">Watch Video</span>
-                  </a>
+                  </Link>
                 </div>
                 <div className="banner__content-social">
                   <p>Follow Us</p>
                   <ul className="social">
                     <li className="social__item">
-                      <a
+                      <Link
                         href="#"
-                        className="social__link social__link--style1 active"
+                        className="social__link social__link--style1 active d-flex justify-content-center align-items-center"
                       >
-                        <i className="fab fa-facebook-f"></i>
-                      </a>
+                        <Facebook size={20} />
+                      </Link>
                     </li>
                     <li className="social__item">
-                      <a href="#" className="social__link social__link--style1">
-                        <i className="fab fa-linkedin-in"></i>
-                      </a>
-                    </li>
-                    <li className="social__item">
-                      <a href="#" className="social__link social__link--style1">
-                        <i className="fab fa-instagram"></i>
-                      </a>
-                    </li>
-                    <li className="social__item">
-                      <a href="#" className="social__link social__link--style1">
-                        <i className="fab fa-youtube"></i>
-                      </a>
-                    </li>
-                    <li className="social__item">
-                      <a
-                        href="/signin.html"
-                        className="social__link social__link--style1"
+                      <Link
+                        href="#"
+                        className="social__link social__link--style1 d-flex justify-content-center align-items-center"
                       >
-                        <i className="fab fa-twitter"></i>
-                      </a>
+                        <Linkedin size={20} />
+                      </Link>
+                    </li>
+                    <li className="social__item">
+                      <Link
+                        href="#"
+                        className="social__link social__link--style1 d-flex justify-content-center align-items-center"
+                      >
+                        <Instagram size={20} />
+                      </Link>
+                    </li>
+                    <li className="social__item">
+                      <Link
+                        href="#"
+                        className="social__link social__link--style1 d-flex justify-content-center align-items-center"
+                      >
+                        <Youtube size={20} />
+                      </Link>
+                    </li>
+                    <li className="social__item">
+                      <Link
+                        href="/signin"
+                        className="social__link social__link--style1 d-flex justify-content-center align-items-center"
+                      >
+                        <Twitter size={20} />
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -82,7 +106,14 @@ export default function Hero() {
 
             <div className="col-lg-6 col-md-6">
               <div className="banner__thumb">
-                <img src="/images/bg/5.png" alt="banner-thumb" />
+                <Image
+                  src="/images/bg/5.png"
+                  alt="banner-thumb"
+                  width={1200}
+                  height={1200}
+                  style={{ width: "auto", height: "auto", maxWidth: "100%" }}
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -95,9 +126,12 @@ export default function Hero() {
             key={i}
             className={`banner__shape-item banner__shape-item--${i}`}
           >
-            <img
+            <Image
               src={`/images/banner/shape/${i}.png`}
               alt="shape icon"
+              width={50}
+              height={50}
+              style={{ width: "auto", height: "auto" }}
             />
           </span>
         ))}
