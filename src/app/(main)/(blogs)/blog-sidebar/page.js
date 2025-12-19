@@ -1,3 +1,4 @@
+import Image from "next/image";
 import BlogCard from "@/components/modules/blogs/BlogCard";
 import blogs from "@/components/modules/blogs/blogData";
 import BlogSidebar from "@/components/modules/blogs/sidebar/BlogSidebar";
@@ -19,7 +20,10 @@ export default function BlogSidebarPage() {
             data-aos-duration="1000"
           >
             <h2>Blog - side bar</h2>
-            <nav style={{ "--bs-breadcrumb-divider": "'/'" }} aria-label="breadcrumb">
+            <nav
+              style={{ "--bs-breadcrumb-divider": "'/'" }}
+              aria-label="breadcrumb"
+            >
               <ol className="breadcrumb mb-0">
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
@@ -29,16 +33,21 @@ export default function BlogSidebarPage() {
             </nav>
           </div>
 
+          {/* Page Header Shapes */}
           <div className="page-header__shape">
-            <span className="page-header__shape-item page-header__shape-item--1">
-              <img src="/images/icon/page-header/1.png" alt="shape" />
-            </span>
-            <span className="page-header__shape-item page-header__shape-item--2">
-              <img src="/images/icon/page-header/2.png" alt="shape" />
-            </span>
-            <span className="page-header__shape-item page-header__shape-item--3">
-              <img src="/images/icon/page-header/3.png" alt="shape" />
-            </span>
+            {[1, 2, 3].map((n) => (
+              <span
+                key={n}
+                className={`page-header__shape-item page-header__shape-item--${n}`}
+              >
+                <Image
+                  src={`/images/icon/page-header/${n}.png`}
+                  alt="shape"
+                  width={60}
+                  height={60}
+                />
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -56,7 +65,7 @@ export default function BlogSidebarPage() {
                     <BlogCard
                       key={blog.id}
                       blog={blog}
-                      columnClass="col-sm-6"   // 🔥 THIS FIXES THE LAYOUT
+                      columnClass="col-sm-6"
                       aosDelay={index % 2 === 0 ? 1000 : 1200}
                     />
                   ))}
@@ -74,11 +83,21 @@ export default function BlogSidebarPage() {
                         <i className="fa-solid fa-angle-left me-2"></i> Prev
                       </Link>
                     </li>
-                    <li><Link href="#" className="active">1</Link></li>
-                    <li className="d-none d-sm-block"><Link href="#">2</Link></li>
-                    <li className="d-none d-sm-block"><Link href="#">3</Link></li>
-                    <li><Link href="#" className="dot">...</Link></li>
-                    <li><Link href="#">12</Link></li>
+                    <li>
+                      <Link href="#" className="active">1</Link>
+                    </li>
+                    <li className="d-none d-sm-block">
+                      <Link href="#">2</Link>
+                    </li>
+                    <li className="d-none d-sm-block">
+                      <Link href="#">3</Link>
+                    </li>
+                    <li>
+                      <Link href="#" className="dot">...</Link>
+                    </li>
+                    <li>
+                      <Link href="#">12</Link>
+                    </li>
                     <li>
                       <Link href="#" className="active">
                         Next <i className="fa-solid fa-angle-right ms-2"></i>
@@ -89,7 +108,7 @@ export default function BlogSidebarPage() {
               </div>
 
               {/* RIGHT SIDEBAR */}
-              <BlogSidebar/>
+              <BlogSidebar />
 
             </div>
           </div>
