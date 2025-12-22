@@ -1,11 +1,28 @@
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export const metadata = {
+// NOTE: You cannot export metadata from a "use client" component.
+// Move this to your layout.js or a parent page.js file.
+/* export const metadata = {
   title: "Contact Us | Torkbiz",
 };
+*/
 
 export default function ContactPage() {
+  // Initialize AOS animation
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // Animation happens once per page load
+    });
+    AOS.refresh(); // Refresh AOS to detect new elements
+  }, []);
+
   return (
     <>
       {/* ================= Page Header ================= */}
@@ -68,7 +85,6 @@ export default function ContactPage() {
         <div className="container">
           <div className="contact__wrapper">
             <div className="row g-5">
-
               {/* Left Info */}
               <div className="col-md-5">
                 <div
@@ -129,7 +145,6 @@ export default function ContactPage() {
 
                   {/* Contact Details */}
                   <div className="contact__details">
-
                     <div className="contact__item">
                       <div className="contact__item-inner">
                         <div className="contact__item-thumb">
@@ -186,7 +201,6 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -233,7 +247,6 @@ export default function ContactPage() {
                   </form>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

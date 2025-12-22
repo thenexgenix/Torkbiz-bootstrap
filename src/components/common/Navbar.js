@@ -101,7 +101,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/index-2">Home Two</Link>
+                        <Link href="/home-2">Home Two</Link>
                       </li>
                       <li>
                         <Link href="/index-2-light">
@@ -117,13 +117,13 @@ export default function Navbar() {
                   </li>
 
                   <li className="menu-item-has-children">
-                    <Link href="/services">Services</Link>
+                    <Link href="/service">Services</Link>
                     <ul className="submenu">
                       <li>
-                        <Link href="/services">Services</Link>
+                        <Link href="/service">Services</Link>
                       </li>
                       <li>
-                        <Link href="/service-details">Services Details</Link>
+                        <Link href="/service/details">Services Details</Link>
                       </li>
                     </ul>
                   </li>
@@ -138,7 +138,7 @@ export default function Navbar() {
                         <Link href="/price">Price</Link>
                       </li>
                       <li>
-                        <Link href="/team">Team</Link>
+                        <Link href="/team-1">Team</Link>
                       </li>
                       <li>
                         <Link href="/team-2">Team 2</Link>
@@ -180,7 +180,7 @@ export default function Navbar() {
                         <Link href="/forgot-pass-2">Reset Password 2</Link>
                       </li>
                       <li>
-                        <Link href="/404">404 Error</Link>
+                        <Link href="/not-found">404 Error</Link>
                       </li>
                     </ul>
                   </li>

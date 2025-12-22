@@ -1,11 +1,54 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function PricingSection() {
+  const [theme, setTheme] = useState("light");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      duration: 1000,
+    });
+    AOS.refresh();
+
+    setMounted(true);
+    const htmlTheme = document.documentElement.getAttribute("data-bs-theme");
+    setTheme(htmlTheme || "light");
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (
+          mutation.type === "attributes" &&
+          mutation.attributeName === "data-bs-theme"
+        ) {
+          const newTheme =
+            document.documentElement.getAttribute("data-bs-theme");
+          setTheme(newTheme || "light");
+        }
+      });
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const getCheckIcon = () => {
+    if (!mounted) return "/images/icon/check.svg";
+    return theme === "dark"
+      ? "/images/icon/check-dark.svg"
+      : "/images/icon/check.svg";
+  };
+
+  if (!mounted) return null;
+
   return (
-    <section className="pricing padding-top padding-bottom bg-color-4">
+    <section className="pricing padding-top padding-bottom bg-color-3">
       <div className="section-header section-header--max50">
         <h2 className="mb-15 mt-minus-10">
           <span>pricings </span>We offer
@@ -41,9 +84,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -54,9 +96,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -67,9 +108,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -80,9 +120,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -104,10 +143,10 @@ export default function PricingSection() {
               </div>
             </div>
 
-            {/* Pricing Item 2: Standard (Active) */}
+            {/* Pricing Item 2 */}
             <div className="col-md-6 col-lg-4">
               <div
-                className="pricing__item"
+                className="pricing__item active"
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
@@ -127,9 +166,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -140,9 +178,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -153,9 +190,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -166,9 +202,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -179,9 +214,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -211,7 +245,7 @@ export default function PricingSection() {
               <div
                 className="pricing__item"
                 data-aos="fade-left"
-                data-aos-duration="1000"
+                data-aos-duration="1200"
               >
                 <div className="pricing__item-inner">
                   <div className="pricing__item-content">
@@ -229,9 +263,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -242,9 +275,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -255,9 +287,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}
@@ -268,9 +299,8 @@ export default function PricingSection() {
                         <li className="pricing__list-item">
                           <span>
                             <Image
-                              src="/images/icon/check.svg"
+                              src={getCheckIcon()}
                               alt="check"
-                              className="dark"
                               width={24}
                               height={24}
                               style={{ width: "auto", height: "auto" }}

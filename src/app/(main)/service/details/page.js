@@ -1,7 +1,15 @@
 import React from 'react'
+import Header from './Header'
+import ServiceDetails from './ServiceDetails'
 
 export default function serviceDetails() {
   return (
-    <div>serviceDetails</div>
+    <div>
+      <Header />
+      <ServiceDetails/>
+
+
+
+    </div>
   )
 }

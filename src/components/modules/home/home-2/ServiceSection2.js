@@ -3,12 +3,20 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export default function ServiceSection() {
+export default function ServiceSection2() {
   const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      once: true, 
+      duration: 800, 
+    });
+    AOS.refresh();
+
     setMounted(true);
     const htmlTheme = document.documentElement.getAttribute("data-bs-theme");
     setTheme(htmlTheme || "light");
@@ -26,10 +34,12 @@ export default function ServiceSection() {
     });
 
     observer.observe(document.documentElement, { attributes: true });
+
     return () => observer.disconnect();
   }, []);
 
   if (!mounted) return null;
+
   const getImageSrc = (num) =>
     theme === "dark"
       ? `/images/service/${num}-dark.png`

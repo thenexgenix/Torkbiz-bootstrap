@@ -1,8 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
+import "aos/dist/aos.css";
 import "@/styles/sass/style.scss";
+import NavbarWrapper from "@/components/common/NavbarWrapper";
+import FooterWrapper from "@/components/common/FooterWrapper";
+import Preloader from "./Preloader";
+import AOSInit from "@/components/AOSInit";
 
 
 
@@ -17,13 +20,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Torkbiz",
-  description: "Business Consulting & Financial Services",
+  title:
+    "Torkbiz - Professional Multipurpose HTML Template for Business Consulting & Financial Services",
+  description:
+    "Professional Multipurpose HTML Template for Business Consulting & Financial Services",
+  icons: {
+    icon: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-bs-theme="light">
+    <html lang="en" data-bs-theme="light" suppressHydrationWarning>
       <head>
         {/* ================= Vendor CSS ================= */}
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -35,13 +43,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {/* ================= Header ================= */}
-        <Navbar />
-
+        <NavbarWrapper />
         {/* ================= Page Content ================= */}
-        {children}
+        <Preloader />
+        <AOSInit>{children}</AOSInit>
 
         {/* ================= Footer ================= */}
-        <Footer />
+        <FooterWrapper />
 
         {/* ================= Vendor JS ================= */}
         <Script

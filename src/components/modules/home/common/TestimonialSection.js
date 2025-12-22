@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -56,10 +55,10 @@ export default function TestimonialSection() {
             <div className="section-header__action">
               <div className="swiper-nav swiper-nav--style1">
                 <button className="swiper-nav__btn testimonial__slider-prev">
-                  <ArrowLeft />
+                  <i className="fa-solid fa-angle-left"></i>
                 </button>
                 <button className="swiper-nav__btn testimonial__slider-next active">
-                  <ArrowRight />
+                  <i className="fa-solid fa-angle-right"></i>
                 </button>
               </div>
             </div>
@@ -118,7 +117,7 @@ export default function TestimonialSection() {
                           </div>
                           <div className="testimonial__quote">
                             <span>
-                              <Quote />
+                              <i className="fa-solid fa-quote-right"></i>
                             </span>
                           </div>
                         </div>

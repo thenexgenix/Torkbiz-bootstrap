@@ -6,13 +6,9 @@ import CountUp from "react-countup";
 
 export default function FeatureSection() {
   const [activeTab, setActiveTab] = useState("one");
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    if (!hasAnimated) {
-      setHasAnimated(true);
-    }
   };
 
   return (
@@ -179,15 +175,13 @@ export default function FeatureSection() {
                           <div className="floating-content__item floating-content__item--style2 d-flex align-items-center">
                             <h3>
                               <span className="purecounter">
-                                {hasAnimated ? (
-                                  "24"
-                                ) : (
+                                {activeTab === "one" && (
                                   <CountUp
+                                    start={0}
                                     end={24}
                                     duration={3}
-                                    enableScrollSpy
-                                    scrollSpyOnce
-                                    onEnd={() => setHasAnimated(true)}
+                                    enableScrollSpy={true}
+                                    scrollSpyOnce={true}
                                   />
                                 )}
                               </span>
@@ -233,15 +227,13 @@ export default function FeatureSection() {
                           <div className="floating-content__item floating-content__item--style2 d-flex align-items-center">
                             <h3>
                               <span className="purecounter">
-                                {hasAnimated ? (
-                                  "24"
-                                ) : (
+                                {activeTab === "two" && (
                                   <CountUp
+                                    start={0}
                                     end={24}
                                     duration={3}
-                                    enableScrollSpy
-                                    scrollSpyOnce
-                                    onEnd={() => setHasAnimated(true)}
+                                    enableScrollSpy={true}
+                                    scrollSpyOnce={true}
                                   />
                                 )}
                               </span>
@@ -287,15 +279,13 @@ export default function FeatureSection() {
                           <div className="floating-content__item floating-content__item--style2 d-flex align-items-center">
                             <h3>
                               <span className="purecounter">
-                                {hasAnimated ? (
-                                  "24"
-                                ) : (
+                                {activeTab === "three" && (
                                   <CountUp
+                                    start={0}
                                     end={24}
                                     duration={3}
-                                    enableScrollSpy
-                                    scrollSpyOnce
-                                    onEnd={() => setHasAnimated(true)}
+                                    enableScrollSpy={true}
+                                    scrollSpyOnce={true}
                                   />
                                 )}
                               </span>
@@ -341,15 +331,13 @@ export default function FeatureSection() {
                           <div className="floating-content__item floating-content__item--style2 d-flex align-items-center">
                             <h3>
                               <span className="purecounter">
-                                {hasAnimated ? (
-                                  "24"
-                                ) : (
+                                {activeTab === "four" && (
                                   <CountUp
+                                    start={0}
                                     end={24}
                                     duration={3}
-                                    enableScrollSpy
-                                    scrollSpyOnce
-                                    onEnd={() => setHasAnimated(true)}
+                                    enableScrollSpy={true}
+                                    scrollSpyOnce={true}
                                   />
                                 )}
                               </span>
@@ -369,6 +357,7 @@ export default function FeatureSection() {
       </div>
 
       <div className="feature__shape">
+        {/* Shape images*/}
         <span className="feature__shape-item feature__shape-item--1">
           <Image
             src="/images/about/shape/1.png"

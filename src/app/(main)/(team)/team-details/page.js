@@ -1,7 +1,16 @@
+import CTASection from '@/components/modules/home/common/CTASection'
 import React from 'react'
+import Header from './Header'
+import TeamDetailsSection from './TeamDetailsSection'
 
 export default function teamDetails() {
   return (
-    <div>teamDetails</div>
+    <div>
+      <Header/>
+      <TeamDetailsSection/>
+
+
+      <CTASection />
+    </div>
   )
 }

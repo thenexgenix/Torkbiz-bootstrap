@@ -2,15 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  ArrowRight,
-  Play,
-  Facebook,
-  Linkedin,
-  Instagram,
-  Youtube,
-  Twitter,
-} from "lucide-react";
 
 export default function Hero() {
   return (
@@ -41,7 +32,7 @@ export default function Hero() {
                   >
                     Get Started{" "}
                     <span>
-                      <ArrowRight />
+                      <i className="fa-solid fa-arrow-right"></i>
                     </span>
                   </Link>
                   <Link
@@ -51,7 +42,7 @@ export default function Hero() {
                     target="_blank"
                   >
                     <span className="playbtn__thumb">
-                      <Play fill="currentColor" size={20} />
+                      <i className="fa-solid fa-play"></i>
                     </span>
                     <span className="playbtn__content">Watch Video</span>
                   </Link>
@@ -64,7 +55,7 @@ export default function Hero() {
                         href="#"
                         className="social__link social__link--style1 active d-flex justify-content-center align-items-center"
                       >
-                        <Facebook size={20} />
+                        <i className="fab fa-facebook-f"></i>
                       </Link>
                     </li>
                     <li className="social__item">
@@ -72,7 +63,7 @@ export default function Hero() {
                         href="#"
                         className="social__link social__link--style1 d-flex justify-content-center align-items-center"
                       >
-                        <Linkedin size={20} />
+                        <i className="fab fa-linkedin-in"></i>
                       </Link>
                     </li>
                     <li className="social__item">
@@ -80,7 +71,7 @@ export default function Hero() {
                         href="#"
                         className="social__link social__link--style1 d-flex justify-content-center align-items-center"
                       >
-                        <Instagram size={20} />
+                        <i className="fab fa-instagram"></i>
                       </Link>
                     </li>
                     <li className="social__item">
@@ -88,7 +79,7 @@ export default function Hero() {
                         href="#"
                         className="social__link social__link--style1 d-flex justify-content-center align-items-center"
                       >
-                        <Youtube size={20} />
+                        <i className="fab fa-youtube"></i>
                       </Link>
                     </li>
                     <li className="social__item">
@@ -96,7 +87,7 @@ export default function Hero() {
                         href="/signin"
                         className="social__link social__link--style1 d-flex justify-content-center align-items-center"
                       >
-                        <Twitter size={20} />
+                        <i className="fab fa-twitter"></i>
                       </Link>
                     </li>
                   </ul>

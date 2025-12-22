@@ -1,11 +1,21 @@
+
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-export const metadata = {
-  title: "404 Page | Torkbiz",
-};
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function NotFound() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    document.title = "404 Page | Torkbiz";
+  }, []);
+
   return (
     <>
       {/* ================= Page Header ================= */}
@@ -88,8 +98,9 @@ export default function NotFound() {
                 </h2>
 
                 <p>
-                  Oops! It looks like you&apos;re lost. The page you were looking for
-                  couldn&apos;t be found. Don&apos;t worry, it happens to the best of us.
+                  Oops! It looks like you&apos;re lost. The page you were
+                  looking for couldn&apos;t be found. Don&apos;t worry, it
+                  happens to the best of us.
                 </p>
 
                 <Link
