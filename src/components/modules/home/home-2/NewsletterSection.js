@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function NewsletterSection() {
   useEffect(() => {
@@ -24,7 +25,13 @@ export default function NewsletterSection() {
               data-aos-duration="1000"
             >
               <div className="cta__thumb">
-                <img src="/images/cta/5.png" alt="cta-thumb" />
+                <Image
+                  src="/images/cta/5.png"
+                  alt="cta-thumb"
+                  width={165}
+                  height={165}
+                  style={{ width: "auto", height: "auto" }}
+                />
               </div>
               <div className="cta__subscribe">
                 <h2>

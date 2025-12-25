@@ -41,6 +41,7 @@ export default function SignInPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
@@ -49,6 +50,7 @@ export default function SignInPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
@@ -57,6 +59,7 @@ export default function SignInPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </div>
@@ -86,16 +89,14 @@ export default function SignInPage() {
 
                   {/* Social Login */}
                   <div className="account__social">
-                    <button
-                      type="button"
-                      className="account__social-btn"
-                    >
+                    <button type="button" className="account__social-btn">
                       <span>
                         <Image
                           src="/images/others/google.svg"
                           alt="google icon"
                           width={20}
                           height={20}
+                          style={{ width: "auto", height: "auto" }}
                         />
                       </span>
                       Sign in with google
@@ -108,16 +109,10 @@ export default function SignInPage() {
                   </div>
 
                   {/* Form */}
-                  <form
-                    className="account__form needs-validation"
-                    noValidate
-                  >
+                  <form className="account__form needs-validation" noValidate>
                     <div className="row g-4">
                       <div className="col-12">
-                        <label
-                          htmlFor="account-email"
-                          className="form-label"
-                        >
+                        <label htmlFor="account-email" className="form-label">
                           Email
                         </label>
                         <input
@@ -131,10 +126,7 @@ export default function SignInPage() {
 
                       <div className="col-12">
                         <div className="form-pass">
-                          <label
-                            htmlFor="account-pass"
-                            className="form-label"
-                          >
+                          <label htmlFor="account-pass" className="form-label">
                             Password
                           </label>
                           <input

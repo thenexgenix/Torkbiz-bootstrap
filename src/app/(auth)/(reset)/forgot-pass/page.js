@@ -41,6 +41,7 @@ export default function ResetPasswordPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
@@ -49,6 +50,7 @@ export default function ResetPasswordPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
@@ -57,6 +59,7 @@ export default function ResetPasswordPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </div>
@@ -79,22 +82,16 @@ export default function ResetPasswordPage() {
                     <h2>Reset your password</h2>
                     <p>
                       Hey there! Forgot your password? No worries, just click
-                      &quot;forgot password&quot; and follow the steps to recover it. Easy
-                      peasy lemon squeezy!
+                      &quot;forgot password&quot; and follow the steps to
+                      recover it. Easy peasy lemon squeezy!
                     </p>
                   </div>
 
                   {/* Form */}
-                  <form
-                    className="account__form needs-validation"
-                    noValidate
-                  >
+                  <form className="account__form needs-validation" noValidate>
                     <div className="row g-4">
                       <div className="col-12">
-                        <label
-                          htmlFor="account-email"
-                          className="form-label"
-                        >
+                        <label htmlFor="account-email" className="form-label">
                           Email
                         </label>
                         <input

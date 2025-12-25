@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function BlogCard({
   blog,
   aosDelay = 800,
-  columnClass = "col-sm-6 col-lg-4", // default for grid page
+  columnClass = "col-sm-6 col-lg-4", 
 }) {
   return (
     <div
@@ -21,7 +21,8 @@ export default function BlogCard({
               width={400}
               height={260}
               className="w-100"
-              style={{ height: "auto" }} // MATCH HTML image behavior
+              style={{ width: "auto", height: "auto" }}
+              priority={true}
             />
           </div>
 
@@ -33,9 +34,7 @@ export default function BlogCard({
             </div>
 
             <h5 className="10">
-              <Link href={`/blogs/${blog.slug}`}>
-                {blog.title}
-              </Link>
+              <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
             </h5>
 
             <p className="mb-15">{blog.excerpt}</p>
@@ -47,6 +46,8 @@ export default function BlogCard({
                   alt={blog.author}
                   width={40}
                   height={40}
+                  style={{ width: "auto", height: "auto" }}
+                  priority={true}
                 />
               </div>
               <div className="blog__writer-designation">

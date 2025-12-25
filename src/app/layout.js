@@ -6,8 +6,7 @@ import NavbarWrapper from "@/components/common/NavbarWrapper";
 import FooterWrapper from "@/components/common/FooterWrapper";
 import Preloader from "./Preloader";
 import AOSInit from "@/components/AOSInit";
-
-
+import ConsoleSilencer from "@/components/ConsoleSilencer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title:
-    "Torkbiz - Professional Multipurpose HTML Template for Business Consulting & Financial Services",
-  description:
-    "Professional Multipurpose HTML Template for Business Consulting & Financial Services",
+  title: "Torkbiz - Professional Multipurpose HTML Template",
+  description: "Professional Multipurpose HTML Template",
   icons: {
     icon: "/images/favicon.png",
   },
@@ -31,7 +28,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-bs-theme="light" suppressHydrationWarning>
+    <html
+      lang="en"
+      data-bs-theme="light"
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <head>
         {/* ================= Vendor CSS ================= */}
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -41,7 +43,12 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/css/all.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        suppressHydrationWarning={true}
+      >
+        
+        <ConsoleSilencer />
         {/* ================= Header ================= */}
         <NavbarWrapper />
         {/* ================= Page Content ================= */}
@@ -56,13 +63,42 @@ export default function RootLayout({ children }) {
           src="/js/bootstrap.bundle.min.js"
           strategy="beforeInteractive"
         />
-        <Script src="/js/all.min.js" strategy="beforeInteractive" />
-        <Script src="/js/swiper-bundle.min.js" strategy="beforeInteractive" />
-        <Script src="/js/aos.js" strategy="beforeInteractive" />
-        <Script src="/js/fslightbox.js" strategy="beforeInteractive" />
-        <Script src="/js/purecounter_vanilla.js" strategy="beforeInteractive" />
-        <Script src="/js/custom.js" strategy="afterInteractive" />
-        <Script id="aos-init" strategy="afterInteractive">
+        <Script
+          src="/js/all.min.js"
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+        />
+
+        <Script
+          crossOrigin="anonymous"
+          src="/js/swiper-bundle.min.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="/js/aos.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="/js/fslightbox.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="/js/purecounter_vanilla.js"
+          strategy="beforeInteractive"
+        />
+        <Script
+          crossOrigin="anonymous"
+          src="/js/custom.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          crossOrigin="anonymous"
+          id="aos-init"
+          strategy="afterInteractive"
+        >
           {`AOS.init();`}
         </Script>
       </body>

@@ -45,6 +45,7 @@ export default function BlogSidebarPage() {
                   alt="shape"
                   width={60}
                   height={60}
+                  style={{ width: "auto", height: "auto" }}
                 />
               </span>
             ))}
@@ -57,7 +58,6 @@ export default function BlogSidebarPage() {
         <div className="container">
           <div className="blog__wrapper">
             <div className="row g-5">
-
               {/* LEFT CONTENT */}
               <div className="col-lg-8">
                 <div className="row g-4">
@@ -84,7 +84,9 @@ export default function BlogSidebarPage() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="#" className="active">1</Link>
+                      <Link href="#" className="active">
+                        1
+                      </Link>
                     </li>
                     <li className="d-none d-sm-block">
                       <Link href="#">2</Link>
@@ -93,7 +95,9 @@ export default function BlogSidebarPage() {
                       <Link href="#">3</Link>
                     </li>
                     <li>
-                      <Link href="#" className="dot">...</Link>
+                      <Link href="#" className="dot">
+                        ...
+                      </Link>
                     </li>
                     <li>
                       <Link href="#">12</Link>
@@ -109,7 +113,6 @@ export default function BlogSidebarPage() {
 
               {/* RIGHT SIDEBAR */}
               <BlogSidebar />
-
             </div>
           </div>
         </div>

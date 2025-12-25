@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 export default function BlogSection() {
   useEffect(() => {
@@ -45,7 +46,14 @@ export default function BlogSection() {
               >
                 <div className="blog__item-inner pt-30 px-30 pb-40">
                   <div className="blog__thumb">
-                    <img src="/images/blog/4.png" alt="blog Images" />
+                    <Image
+                      src="/images/blog/4.png"
+                      alt="blog Images"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </div>
 
                   <div className="blog__content mt-30">
@@ -80,7 +88,14 @@ export default function BlogSection() {
               >
                 <div className="blog__item-inner pt-30 px-30 pb-40">
                   <div className="blog__thumb">
-                    <img src="/images/blog/5.png" alt="blog Images" />
+                    <Image
+                      src="/images/blog/5.png"
+                      alt="blog Images"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </div>
 
                   <div className="blog__content mt-30">

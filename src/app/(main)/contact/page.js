@@ -58,6 +58,7 @@ export default function ContactPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
@@ -66,6 +67,7 @@ export default function ContactPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
@@ -74,6 +76,7 @@ export default function ContactPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </div>
@@ -154,6 +157,7 @@ export default function ContactPage() {
                               alt="phone"
                               width={40}
                               height={40}
+                              style={{ width: "auto", height: "auto" }}
                             />
                           </span>
                         </div>
@@ -173,6 +177,7 @@ export default function ContactPage() {
                               alt="email"
                               width={40}
                               height={40}
+                              style={{ width: "auto", height: "auto" }}
                             />
                           </span>
                         </div>
@@ -192,6 +197,7 @@ export default function ContactPage() {
                               alt="location"
                               width={40}
                               height={40}
+                              style={{ width: "auto", height: "auto" }}
                             />
                           </span>
                         </div>

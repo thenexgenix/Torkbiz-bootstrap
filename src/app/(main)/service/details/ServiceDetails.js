@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 const ServiceDetails = () => {
   useEffect(() => {
@@ -27,7 +28,14 @@ const ServiceDetails = () => {
                     data-aos-duration="800"
                   >
                     <div className="service-details__thumb-inner">
-                      <img src="/images/service/bg.png" alt="service-icon" />
+                      <Image
+                        src="/images/service/bg.png"
+                        alt="service-icon"
+                        width={0}
+                        height={0}
+                        sizes="100vw"
+                        style={{ width: "100%", height: "auto" }}
+                      />
                     </div>
                   </div>
                   <div
@@ -289,9 +297,13 @@ const ServiceDetails = () => {
                           <div className="team__item team__item--shape team__item--bgcolor2">
                             <div className="team__item-inner team__item-inner--shape">
                               <div className="team__item-thumb">
-                                <img
+                                <Image
                                   src="/images/team/2.png"
                                   alt="Team Image"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
                                 />
                               </div>
                               <div className="team__item-content team__item-content--style1">
@@ -308,21 +320,30 @@ const ServiceDetails = () => {
                               </div>
                               <div className="team__item-shape">
                                 <span className="team__item-shape1">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/1.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                                 <span className="team__item-shape2">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/2.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                                 <span className="team__item-shape3">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/3.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                               </div>
@@ -333,9 +354,13 @@ const ServiceDetails = () => {
                           <div className="team__item team__item--shape team__item--bgcolor2">
                             <div className="team__item-inner team__item-inner--shape">
                               <div className="team__item-thumb">
-                                <img
+                                <Image
                                   src="/images/team/3.png"
                                   alt="Team Image"
+                                  width={0}
+                                  height={0}
+                                  sizes="100vw"
+                                  style={{ width: "100%", height: "auto" }}
                                 />
                               </div>
                               <div className="team__item-content team__item-content--style1">
@@ -354,21 +379,30 @@ const ServiceDetails = () => {
                               </div>
                               <div className="team__item-shape">
                                 <span className="team__item-shape1">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/1.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                                 <span className="team__item-shape2">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/2.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                                 <span className="team__item-shape3">
-                                  <img
+                                  <Image
                                     src="/images/team/icon/3.png"
                                     alt="shpae-icon"
+                                    width={65}
+                                    height={65}
+                                    style={{ width: "auto", height: "auto" }}
                                   />
                                 </span>
                               </div>
