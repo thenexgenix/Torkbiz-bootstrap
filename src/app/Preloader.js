@@ -25,10 +25,9 @@ export default function Preloader() {
           alt="preloader icon"
           width={80}
           height={80}
-          priority
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
-
     </div>
   );
 }

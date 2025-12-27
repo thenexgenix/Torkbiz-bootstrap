@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const FooterHomeTwo = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -34,7 +35,18 @@ const FooterHomeTwo = () => {
               <div className="col-lg-6 col-md-5">
                 <div className="footer__about">
                   <Link href="/" className="footer__about-logo">
-                    <img src="/images/logo/Logo-white.png" alt="Logo" />
+                    <Image
+                      src="/images/logo/Logo-white.png"
+                      alt="Logo"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{
+                        width: "auto",
+                        height: "auto",
+                        maxWidth: "160px",
+                      }}
+                    />
                   </Link>
                   <p className="footer__about-moto">
                     Welcome to our trading site! We offer the best, most
@@ -51,9 +63,17 @@ const FooterHomeTwo = () => {
                             rel="noopener noreferrer"
                             className="stretched-link"
                           >
-                            <img
+                            <Image
                               src="/images/footer/apple.png"
                               alt="apple-icon"
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              style={{
+                                width: "auto",
+                                height: "auto",
+                                maxWidth: "160px",
+                              }}
                             />
                           </Link>
                         </div>
@@ -72,9 +92,17 @@ const FooterHomeTwo = () => {
                             rel="noopener noreferrer"
                             className="stretched-link"
                           >
-                            <img
+                            <Image
                               src="/images/footer/play.png"
                               alt="playstore-icon"
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              style={{
+                                width: "auto",
+                                height: "auto",
+                                maxWidth: "160px",
+                              }}
                             />
                           </Link>
                         </div>
@@ -163,13 +191,13 @@ const FooterHomeTwo = () => {
               <div className="footer__end-copyright">
                 <p className="mb-0">
                   © 2023 All Rights Reserved By{" "}
-                  <a
+                  <Link
                     href="https://themeforest.net/user/thetork/portfolio"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Thetork
-                  </a>
+                  </Link>
                 </p>
               </div>
               <div>
@@ -222,16 +250,40 @@ const FooterHomeTwo = () => {
       </div>
       <div className="footer__shape">
         <span className="footer__shape-item footer__shape-item--1">
-          <img src="/images/footer/1.png" alt="shape icon" />
+          <Image
+            src="/images/footer/1.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="footer__shape-item footer__shape-item--2">
-          <img src="/images/footer/2.png" alt="shape icon" />
+          <Image
+            src="/images/footer/2.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="footer__shape-item footer__shape-item--3">
-          <img src="/images/footer/3.png" alt="shape icon" />
+          <Image
+            src="/images/footer/3.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="footer__shape-item footer__shape-item--4">
-          <img src="/images/footer/4.png" alt="shape icon" />
+          <Image
+            src="/images/footer/4.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
       </div>
 

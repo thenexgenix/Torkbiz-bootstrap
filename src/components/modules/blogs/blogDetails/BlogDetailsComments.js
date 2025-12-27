@@ -9,10 +9,13 @@ const comments = [
 
 export default function BlogDetailsComments() {
   return (
-    <div className="blog-details__comment" data-aos="fade-up" data-aos-duration="1000">
+    <div
+      className="blog-details__comment"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
       <div className="sidebar">
         <div className="sidebar__comment">
-
           <div className="sidebar__head">
             <h3>Comment</h3>
           </div>
@@ -28,7 +31,6 @@ export default function BlogDetailsComments() {
                 >
                   <div className="comment">
                     <div className="comment__inner">
-
                       <div className="comment__head">
                         <div className="comment__author">
                           <div className="comment__author-thumb">
@@ -37,6 +39,7 @@ export default function BlogDetailsComments() {
                               alt={name}
                               width={50}
                               height={50}
+                              style={{ width: "auto", height: "auto" }}
                             />
                           </div>
                           <div className="comment__author-info">
@@ -52,6 +55,7 @@ export default function BlogDetailsComments() {
                               alt="reply"
                               width={14}
                               height={14}
+                              style={{ width: "auto", height: "auto" }}
                             />{" "}
                             reply
                           </a>
@@ -60,17 +64,16 @@ export default function BlogDetailsComments() {
 
                       <div className="comment__body">
                         <p className="mb-0">
-                          We invite you to explore our trading blog for insights and expert analysis.
+                          We invite you to explore our trading blog for insights
+                          and expert analysis.
                         </p>
                       </div>
-
                     </div>
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-
         </div>
       </div>
     </div>

@@ -33,6 +33,7 @@ export default function SidebarRecentPost() {
                           alt={title}
                           width={80}
                           height={80}
+                          style={{ width: "auto", height: "auto" }}
                         />
                       </Link>
                     </div>

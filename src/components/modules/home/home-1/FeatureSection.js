@@ -182,7 +182,12 @@ export default function FeatureSection() {
                                     duration={3}
                                     enableScrollSpy={true}
                                     scrollSpyOnce={true}
-                                  />
+                                  >
+                                   
+                                    {({ countUpRef }) => (
+                                      <span ref={countUpRef} />
+                                    )}
+                                  </CountUp>
                                 )}
                               </span>
                               /7
@@ -234,7 +239,12 @@ export default function FeatureSection() {
                                     duration={3}
                                     enableScrollSpy={true}
                                     scrollSpyOnce={true}
-                                  />
+                                  >
+                                    {/* FIX APPLIED BELOW */}
+                                    {({ countUpRef }) => (
+                                      <span ref={countUpRef} />
+                                    )}
+                                  </CountUp>
                                 )}
                               </span>
                               /7
@@ -286,7 +296,11 @@ export default function FeatureSection() {
                                     duration={3}
                                     enableScrollSpy={true}
                                     scrollSpyOnce={true}
-                                  />
+                                  >
+                                    {({ countUpRef }) => (
+                                      <span ref={countUpRef} />
+                                    )}
+                                  </CountUp>
                                 )}
                               </span>
                               /7
@@ -338,7 +352,11 @@ export default function FeatureSection() {
                                     duration={3}
                                     enableScrollSpy={true}
                                     scrollSpyOnce={true}
-                                  />
+                                  >
+                                    {({ countUpRef }) => (
+                                      <span ref={countUpRef} />
+                                    )}
+                                  </CountUp>
                                 )}
                               </span>
                               /7

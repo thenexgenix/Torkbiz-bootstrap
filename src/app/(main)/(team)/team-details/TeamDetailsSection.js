@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const TeamDetailsSection = () => {
   return (
@@ -9,7 +10,14 @@ const TeamDetailsSection = () => {
           <div className="row g-5 align-items-center">
             <div className="col-md-5">
               <div className="team__thumb">
-                <img src="/images/team-details/1.png" alt="Team Image" />
+                <Image
+                  src="/images/team-details/1.png"
+                  alt="Team Image"
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }}
+                />
               </div>
             </div>
             <div className="col-md-7">

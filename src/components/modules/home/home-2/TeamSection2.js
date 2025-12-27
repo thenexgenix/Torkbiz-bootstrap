@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link"; 
+import Link from "next/link";
+import Image from "next/image"; 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -69,10 +70,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/1.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -136,10 +141,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/2.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -203,10 +212,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/3.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -270,10 +283,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/4.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -315,7 +332,7 @@ export default function TeamSection2() {
                           <li className="social__item">
                             <Link
                               href="/signin"
-                              className="social__link social__link--style3 "
+                              className="social__link social__link--style3"
                             >
                               <i className="fab fa-twitter"></i>
                             </Link>
@@ -337,10 +354,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/5.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -404,10 +425,15 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/6.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      unoptimized={true}
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -449,7 +475,7 @@ export default function TeamSection2() {
                           <li className="social__item">
                             <Link
                               href="/signin"
-                              className="social__link social__link--style3 "
+                              className="social__link social__link--style3"
                             >
                               <i className="fab fa-twitter"></i>
                             </Link>
@@ -471,10 +497,14 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/7.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -538,10 +568,15 @@ export default function TeamSection2() {
               >
                 <div className="team__item-inner team__item-inner--shape">
                   <div className="team__item-thumb team__item-thumb--style2">
-                    <img
+                    <Image
                       src={getTeamImage("/images/team/home2/8.png")}
                       alt="Team Image"
                       className="dark"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      unoptimized={true}
+                      style={{ width: "100%", height: "auto" }}
                     />
                   </div>
                   <div className="team__item-content ">
@@ -583,7 +618,7 @@ export default function TeamSection2() {
                           <li className="social__item">
                             <Link
                               href="/signin"
-                              className="social__link social__link--style3 "
+                              className="social__link social__link--style3"
                             >
                               <i className="fab fa-twitter"></i>
                             </Link>

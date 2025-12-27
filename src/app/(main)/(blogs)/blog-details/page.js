@@ -49,6 +49,7 @@ export default function BlogDetailsPage() {
                   alt="shape-icon"
                   width={60}
                   height={60}
+                  style={{ width: "auto", height: "auto" }}
                 />
               </span>
             ))}
@@ -61,12 +62,10 @@ export default function BlogDetailsPage() {
         <div className="container">
           <div className="blog-details__wrapper">
             <div className="row g-5">
-
               {/* LEFT COLUMN */}
               <div className="col-lg-8">
                 <div className="blog-details__item">
                   <div className="blog-details__item-inner">
-
                     {/* Thumbnail */}
                     <div className="blog-details__thumb">
                       <div
@@ -80,6 +79,7 @@ export default function BlogDetailsPage() {
                           width={800}
                           height={450}
                           className="w-100 h-auto"
+                          style={{ width: "auto", height: "auto" }}
                         />
                       </div>
                     </div>
@@ -96,6 +96,7 @@ export default function BlogDetailsPage() {
                               alt="user-icon"
                               width={16}
                               height={16}
+                              style={{ width: "auto", height: "auto" }}
                             />
                             Mobarok Hossain
                           </li>
@@ -105,6 +106,7 @@ export default function BlogDetailsPage() {
                               alt="date-icon"
                               width={16}
                               height={16}
+                              style={{ width: "auto", height: "auto" }}
                             />
                             April 25, 2023
                           </li>
@@ -115,6 +117,7 @@ export default function BlogDetailsPage() {
                                 alt="comment-icon"
                                 width={16}
                                 height={16}
+                                style={{ width: "auto", height: "auto" }}
                               />
                               4 Comments
                             </a>
@@ -123,10 +126,10 @@ export default function BlogDetailsPage() {
                       </div>
 
                       <p className="mb-0">
-                        Our efficiency is off the charts! We&apos;ve streamlined our
-                        processes so smoothly, we could run circles around the
-                        competition. Our team is firing on all cylinders and our
-                        clients are reaping the benefits.
+                        Our efficiency is off the charts! We&apos;ve streamlined
+                        our processes so smoothly, we could run circles around
+                        the competition. Our team is firing on all cylinders and
+                        our clients are reaping the benefits.
                       </p>
                     </div>
 
@@ -139,7 +142,6 @@ export default function BlogDetailsPage() {
                       <div className="blog-details__segment-inner">
                         <div className="blog-details__segment-item">
                           <div className="row gy-4">
-
                             <div className="col-xl-6">
                               <div className="blog-details__segment-thumb">
                                 <Image
@@ -148,6 +150,7 @@ export default function BlogDetailsPage() {
                                   width={400}
                                   height={300}
                                   className="w-100 h-auto"
+                                  style={{ width: "auto", height: "auto" }}
                                 />
                               </div>
                             </div>
@@ -191,10 +194,10 @@ export default function BlogDetailsPage() {
                                   width={400}
                                   height={300}
                                   className="w-100 h-auto"
+                                  style={{ width: "auto", height: "auto" }}
                                 />
                               </div>
                             </div>
-
                           </div>
                         </div>
                       </div>
@@ -208,14 +211,12 @@ export default function BlogDetailsPage() {
 
                     {/* Comment Form */}
                     <BlogDetailsCommentForm />
-
                   </div>
                 </div>
               </div>
 
               {/* RIGHT SIDEBAR */}
               <BlogSidebar />
-
             </div>
           </div>
         </div>

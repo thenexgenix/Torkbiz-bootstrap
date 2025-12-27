@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const AboutConsultancy = () => {
@@ -59,7 +60,13 @@ const AboutConsultancy = () => {
                 <div className="about__content-inner">
                   <div className="about__icon">
                     <div className="about__icon-inner">
-                      <img src={getIcon(1)} alt="about-icon" />
+                      <Image
+                        src={getIcon(1)}
+                        alt="about-icon"
+                        width={65}
+                        height={65}
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </div>
                   </div>
                   <div className="about__content-details">
@@ -81,7 +88,13 @@ const AboutConsultancy = () => {
                 <div className="about__content-inner">
                   <div className="about__icon">
                     <div className="about__icon-inner">
-                      <img src={getIcon(2)} alt="about-icon" />
+                      <Image
+                        src={getIcon(2)}
+                        alt="about-icon"
+                        width={65}
+                        height={65}
+                        style={{ width: "auto", height: "auto" }}
+                      />
                     </div>
                   </div>
                   <div className="about__content-details">
@@ -103,7 +116,15 @@ const AboutConsultancy = () => {
                 <div className="about__content-inner">
                   <div className="about__icon">
                     <div className="about__icon-inner">
-                      <img src={getIcon(3)} alt="about-icon" />
+                    
+                      <Image
+                        src={getIcon(3)}
+                        alt="about-icon"
+                        width={65}
+                        height={65}
+                        style={{ width: "auto", height: "auto" }}
+                        unoptimized={true}
+                      />
                     </div>
                   </div>
                   <div className="about__content-details">
@@ -126,7 +147,14 @@ const AboutConsultancy = () => {
               >
                 <div className="about__thumb-inner mt-30 mt-lg-0">
                   <div className="about__thumb-image floating-content">
-                    <img src="/images/about/3.png" alt="about-image" />
+                    <Image
+                      src="/images/about/3.png"
+                      alt="about-image"
+                      width={0}
+                      height={0}
+                      sizes="100vw"
+                      style={{ width: "100%", height: "auto" }}
+                    />
                     <div className="floating-content__top-right">
                       <div className="floating-content__item">
                         <h3>
@@ -153,16 +181,44 @@ const AboutConsultancy = () => {
       {/* SHAPES */}
       <div className="about__shape about__shape--style2">
         <span className="about__shape-item about__shape-item--1">
-          <img src="/images/about/shape/1.png" alt="shpae-icon" />
+          <Image
+            src="/images/about/shape/1.png"
+            alt="shpae-icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="about__shape-item about__shape-item--2">
-          <img src="/images/about/shape/2.png" alt="shpae-icon" />
+          <Image
+            src="/images/about/shape/2.png"
+            alt="shpae-icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="about__shape-item about__shape-item--3">
-          <img src="/images/about/shape/3.png" alt="shpae-icon" />
+          <Image
+            src="/images/about/shape/3.png"
+            alt="shpae-icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="about__shape-item about__shape-item--4">
-          <img src="/images/about/shape/4.png" alt="shpae-icon" />
+          <Image
+            src="/images/about/shape/4.png"
+            alt="shpae-icon"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
       </div>
     </section>

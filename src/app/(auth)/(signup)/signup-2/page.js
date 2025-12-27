@@ -16,7 +16,6 @@ export default function SecondSignUpPage() {
         >
           <div className="account__inner">
             <div className="row gx-4 align-items-center">
-
               {/* LEFT IMAGE */}
               <div className="col-lg-6">
                 <div className="account__thumb">
@@ -25,6 +24,7 @@ export default function SecondSignUpPage() {
                     alt="account image"
                     width={600}
                     height={600}
+                    style={{ width: "auto", height: "auto" }}
                     priority
                   />
                 </div>
@@ -33,7 +33,6 @@ export default function SecondSignUpPage() {
               {/* RIGHT CONTENT */}
               <div className="col-lg-6">
                 <div className="account__content account__content--style2">
-
                   {/* TITLE */}
                   <div className="account__header">
                     <h2>Register</h2>
@@ -71,7 +70,6 @@ export default function SecondSignUpPage() {
                   {/* FORM */}
                   <form className="account__form needs-validation">
                     <div className="row g-3">
-
                       <div className="col-12 col-md-6">
                         <label className="form-label">First name</label>
                         <input
@@ -107,10 +105,7 @@ export default function SecondSignUpPage() {
                             className="form-control"
                             placeholder="Password"
                           />
-                          <button
-                            type="button"
-                            className="form-pass__toggle"
-                          >
+                          <button type="button" className="form-pass__toggle">
                             <i className="fa fa-eye" />
                           </button>
                         </div>
@@ -124,10 +119,7 @@ export default function SecondSignUpPage() {
                             className="form-control"
                             placeholder="Re-type password"
                           />
-                          <button
-                            type="button"
-                            className="form-pass__toggle"
-                          >
+                          <button type="button" className="form-pass__toggle">
                             <i className="fa fa-eye" />
                           </button>
                         </div>
@@ -149,10 +141,8 @@ export default function SecondSignUpPage() {
                       <Link href="/signin-2">Login</Link>
                     </p>
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>

@@ -28,13 +28,31 @@ export default function BlogsGridPage() {
 
           <div className="page-header__shape">
             <span className="page-header__shape-item page-header__shape-item--1">
-              <Image src="/images/icon/page-header/1.png" alt="" width={60} height={60} />
+              <Image
+                src="/images/icon/page-header/1.png"
+                alt=""
+                width={60}
+                height={60}
+                style={{ width: "auto", height: "auto" }}
+              />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
-              <Image src="/images/icon/page-header/2.png" alt="" width={60} height={60} />
+              <Image
+                src="/images/icon/page-header/2.png"
+                alt=""
+                width={60}
+                height={60}
+                style={{ width: "auto", height: "auto" }}
+              />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
-              <Image src="/images/icon/page-header/3.png" alt="" width={60} height={60} />
+              <Image
+                src="/images/icon/page-header/3.png"
+                alt=""
+                width={60}
+                height={60}
+                style={{ width: "auto", height: "auto" }}
+              />
             </span>
           </div>
         </div>
@@ -58,15 +76,31 @@ export default function BlogsGridPage() {
             <div className="paginations mt-5">
               <ul className="lab-ul d-flex flex-wrap justify-content-center mb-1">
                 <li>
-                  <Link href="#"><i className="fa-solid fa-angle-left me-2"></i> Prev</Link>
+                  <Link href="#">
+                    <i className="fa-solid fa-angle-left me-2"></i> Prev
+                  </Link>
                 </li>
-                <li><Link href="#" className="active">1</Link></li>
-                <li className="d-none d-sm-block"><Link href="#">2</Link></li>
-                <li className="d-none d-sm-block"><Link href="#">3</Link></li>
-                <li><span className="dot">...</span></li>
-                <li><Link href="#">12</Link></li>
                 <li>
-                  <Link href="#">Next <i className="fa-solid fa-angle-right ms-2"></i></Link>
+                  <Link href="#" className="active">
+                    1
+                  </Link>
+                </li>
+                <li className="d-none d-sm-block">
+                  <Link href="#">2</Link>
+                </li>
+                <li className="d-none d-sm-block">
+                  <Link href="#">3</Link>
+                </li>
+                <li>
+                  <span className="dot">...</span>
+                </li>
+                <li>
+                  <Link href="#">12</Link>
+                </li>
+                <li>
+                  <Link href="#">
+                    Next <i className="fa-solid fa-angle-right ms-2"></i>
+                  </Link>
                 </li>
               </ul>
             </div>

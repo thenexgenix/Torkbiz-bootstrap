@@ -41,6 +41,7 @@ export default function SignUpPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
@@ -49,6 +50,7 @@ export default function SignUpPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
@@ -57,6 +59,7 @@ export default function SignUpPage() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </div>
@@ -92,6 +95,7 @@ export default function SignUpPage() {
                           alt="google icon"
                           width={20}
                           height={20}
+                          style={{ width: "auto", height: "auto" }}
                         />
                       </span>
                       Sign in with google
@@ -104,10 +108,7 @@ export default function SignUpPage() {
                   </div>
 
                   {/* Form */}
-                  <form
-                    className="account__form needs-validation"
-                    noValidate
-                  >
+                  <form className="account__form needs-validation" noValidate>
                     <div className="row g-4">
                       <div className="col-12 col-md-6">
                         <label htmlFor="first-name" className="form-label">
@@ -158,10 +159,7 @@ export default function SignUpPage() {
                             placeholder="Password"
                             required
                           />
-                          <button
-                            type="button"
-                            className="form-pass__toggle"
-                          >
+                          <button type="button" className="form-pass__toggle">
                             <i className="fa fa-eye"></i>
                           </button>
                         </div>
@@ -169,10 +167,7 @@ export default function SignUpPage() {
 
                       <div className="col-12">
                         <div className="form-pass">
-                          <label
-                            htmlFor="account-cpass"
-                            className="form-label"
-                          >
+                          <label htmlFor="account-cpass" className="form-label">
                             Confirm Password
                           </label>
                           <input
@@ -182,10 +177,7 @@ export default function SignUpPage() {
                             placeholder="Re-type password"
                             required
                           />
-                          <button
-                            type="button"
-                            className="form-pass__toggle"
-                          >
+                          <button type="button" className="form-pass__toggle">
                             <i className="fa fa-eye"></i>
                           </button>
                         </div>

@@ -130,34 +130,6 @@ export default function TestimonialSection() {
           </div>
         </div>
       </section>
-
-      {/* CSS to enforce equal height cards */}
-      <style jsx global>{`
-        .testimonial__slider .swiper-slide {
-          height: auto !important;
-          display: flex;
-        }
-
-        .testimonial__item {
-          width: 100%;
-          display: flex;
-        }
-
-        .testimonial__item-inner {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          height: 100%;
-        }
-
-        .testimonial__item-content {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-        }
-      `}</style>
     </>
   );
 }

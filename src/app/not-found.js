@@ -51,6 +51,7 @@ export default function NotFound() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--2">
@@ -59,6 +60,7 @@ export default function NotFound() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
             <span className="page-header__shape-item page-header__shape-item--3">
@@ -67,6 +69,7 @@ export default function NotFound() {
                 alt="shape"
                 width={60}
                 height={60}
+                style={{ width: "auto", height: "auto" }}
               />
             </span>
           </div>
@@ -88,6 +91,7 @@ export default function NotFound() {
                   alt="404 image"
                   width={500}
                   height={350}
+                  style={{ width: "auto", height: "auto" }}
                   priority
                 />
               </div>

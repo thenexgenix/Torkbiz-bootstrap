@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 const Header = () => {
   useEffect(() => {
@@ -42,13 +43,31 @@ const Header = () => {
         </div>
         <div className="page-header__shape">
           <span className="page-header__shape-item page-header__shape-item--1">
-            <img src="/images/icon/page-header/1.png" alt="shape-icon" />
+            <Image
+              src="/images/icon/page-header/1.png"
+              alt="shape-icon"
+              width={65}
+              height={65}
+              style={{ width: "auto", height: "auto" }}
+            />
           </span>
           <span className="page-header__shape-item page-header__shape-item--2">
-            <img src="/images/icon/page-header/2.png" alt="shape-icon" />
+            <Image
+              src="/images/icon/page-header/2.png"
+              alt="shape-icon"
+              width={65}
+              height={65}
+              style={{ width: "auto", height: "auto" }}
+            />
           </span>
           <span className="page-header__shape-item page-header__shape-item--3">
-            <img src="/images/icon/page-header/3.png" alt="shape-icon" />
+            <Image
+              src="/images/icon/page-header/3.png"
+              alt="shape-icon"
+              width={65}
+              height={65}
+              style={{ width: "auto", height: "auto" }}
+            />
           </span>
         </div>
       </div>

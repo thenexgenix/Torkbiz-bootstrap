@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -43,7 +44,7 @@ const HeroSection = () => {
                       <i className="fa-solid fa-angle-right"></i>
                     </span>
                   </Link>
-                  <a
+                  <Link
                     href="https://www.youtube.com/watch?v=uJSgaPIvgKk&ab_channel=FreeTemplates"
                     className="playbtn playbtn--style2"
                     data-fslightbox
@@ -52,15 +53,19 @@ const HeroSection = () => {
                       <i className="fa-solid fa-play"></i>
                     </span>
                     <span className="playbtn__content">Watch Video</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="col-lg-6 col-md-5">
               <div className="banner__thumb">
-                <img
+                <Image
                   src="/images/banner/home2/1.png"
                   alt="banner-thumb"
+                  width={480} 
+                  height={700}
+                  style={{ height: "auto" }} 
+                  priority
                 />
               </div>
             </div>
@@ -69,13 +74,31 @@ const HeroSection = () => {
       </div>
       <div className="banner__shape">
         <span className="banner__shape-item banner__shape-item--6">
-          <img src="/images/banner/shape/2.png" alt="shape icon" />
+          <Image
+            src="/images/banner/shape/2.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="banner__shape-item banner__shape-item--7">
-          <img src="/images/banner/shape/4.png" alt="shape icon" />
+          <Image
+            src="/images/banner/shape/4.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
         <span className="banner__shape-item banner__shape-item--8">
-          <img src="/images/banner/shape/2.png" alt="shape icon" />
+          <Image
+            src="/images/banner/shape/2.png"
+            alt="shape icon"
+            width={65}
+            height={65}
+            style={{ width: "auto", height: "auto" }}
+          />
         </span>
       </div>
     </section>

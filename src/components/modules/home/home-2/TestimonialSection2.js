@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image"; 
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -69,7 +69,14 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                          <img src="/images/testimonial/3.png" alt="author" />
+                      
+                          <Image
+                            src="/images/testimonial/3.png"
+                            alt="author"
+                            width={100}
+                            height={100}
+                            style={{ width: "auto", height: "auto" }}
+                          />
                         </div>
                         <div className="testimonial__author-designation">
                           <h6>Song Yoo-mee</h6>
@@ -100,7 +107,14 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                          <img src="/images/testimonial/4.png" alt="author" />
+                      
+                          <Image
+                            src="/images/testimonial/4.png"
+                            alt="author"
+                            width={100}
+                            height={100}
+                            style={{ width: "auto", height: "auto" }}
+                          />
                         </div>
                         <div className="testimonial__author-designation">
                           <h6>Bemra Ram</h6>
@@ -131,7 +145,14 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                          <img src="/images/testimonial/5.png" alt="author" />
+                         
+                          <Image
+                            src="/images/testimonial/5.png"
+                            alt="author"
+                            width={100}
+                            height={100}
+                            style={{ width: "auto", height: "auto" }}
+                          />
                         </div>
                         <div className="testimonial__author-designation">
                           <h6>Harsi Kosanam</h6>
@@ -162,7 +183,14 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                          <img src="/images/testimonial/3.png" alt="author" />
+                        
+                          <Image
+                            src="/images/testimonial/3.png"
+                            alt="author"
+                            width={100}
+                            height={100}
+                            style={{ width: "auto", height: "auto" }}
+                          />
                         </div>
                         <div className="testimonial__author-designation">
                           <h6>John Doe</h6>
