@@ -74,7 +74,7 @@ export default function FAQSection() {
       <div className="container">
         <div className="faq__wrapper">
           <div className="row g-5 align-items-center justify-content-between">
-            {/* Left Column: Accordion */}
+            {/* Accordion */}
             <div className="col-lg-6">
               <div
                 className="accordion accordion--style1"
@@ -125,7 +125,7 @@ export default function FAQSection() {
               </div>
             </div>
 
-            {/* Right Column: Image */}
+            {/* Image */}
             <div className="col-lg-6">
               <div
                 className="faq__thumb"

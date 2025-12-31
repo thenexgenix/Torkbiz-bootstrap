@@ -10,7 +10,7 @@ const ServiceDetails = () => {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      once: true, 
+      once: false, 
     });
   }, []);
 

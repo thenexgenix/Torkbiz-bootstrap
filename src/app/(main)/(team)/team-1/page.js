@@ -8,7 +8,7 @@ export default function firsteam() {
     <div>
       <Header />
       <TeamSection />
-      <CTASection />
+      <CTASection className="bg-color-3" />
     </div>
   )
 }

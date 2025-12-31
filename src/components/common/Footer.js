@@ -1,16 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react"; 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
-  Twitter,
-  ArrowUpFromLine,
-} from "lucide-react";
+import { ArrowUpFromLine } from "lucide-react";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -208,7 +201,7 @@ export default function Footer() {
                       href="#"
                       className="social__link social__link--style2"
                     >
-                      <Facebook size={18} />
+                      <i className="fab fa-facebook-f"></i>
                     </Link>
                   </li>
                   <li className="social__item">
@@ -216,7 +209,7 @@ export default function Footer() {
                       href="#"
                       className="social__link social__link--style2"
                     >
-                      <Instagram size={18} />
+                      <i className="fab fa-instagram"></i>
                     </Link>
                   </li>
                   <li className="social__item">
@@ -224,7 +217,7 @@ export default function Footer() {
                       href="#"
                       className="social__link social__link--style2"
                     >
-                      <Linkedin size={18} />
+                      <i className="fa-brands fa-linkedin-in"></i>
                     </Link>
                   </li>
                   <li className="social__item">
@@ -232,7 +225,7 @@ export default function Footer() {
                       href="#"
                       className="social__link social__link--style2"
                     >
-                      <Youtube size={18} />
+                      <i className="fab fa-youtube"></i>
                     </Link>
                   </li>
                   <li className="social__item">
@@ -240,7 +233,7 @@ export default function Footer() {
                       href="#"
                       className="social__link social__link--style2 d-sm-none d-md-flex justify-content-center align-items-center"
                     >
-                      <Twitter size={18} />
+                      <i className="fab fa-twitter"></i>
                     </Link>
                   </li>
                 </ul>

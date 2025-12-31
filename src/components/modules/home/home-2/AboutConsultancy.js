@@ -116,7 +116,6 @@ const AboutConsultancy = () => {
                 <div className="about__content-inner">
                   <div className="about__icon">
                     <div className="about__icon-inner">
-                    
                       <Image
                         src={getIcon(3)}
                         alt="about-icon"
@@ -162,6 +161,7 @@ const AboutConsultancy = () => {
                             className="purecounter"
                             data-purecounter-start="0"
                             data-purecounter-end="12"
+                            style={{ marginRight: "5px" }}
                           >
                             12
                           </span>

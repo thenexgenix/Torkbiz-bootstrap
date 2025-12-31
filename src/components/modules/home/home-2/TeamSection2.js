@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image"; 
+import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { usePathname } from "next/navigation"; 
 
 export default function TeamSection2() {
   const [theme, setTheme] = useState("light");
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     AOS.init({
@@ -632,6 +634,45 @@ export default function TeamSection2() {
             </div>
           </div>
         </div>
+        {pathname === "/team-2" && (
+          <div
+            className="paginations"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+          >
+            <ul className="lab-ul d-flex flex-wrap justify-content-center mb-1">
+              <li>
+                <Link href="#">
+                  <i className="fa-solid fa-angle-left me-2"></i> Prev
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="active">
+                  1
+                </Link>
+              </li>
+              <li className="d-none d-sm-block">
+                <Link href="#">2</Link>
+              </li>
+              <li className="d-none d-sm-block">
+                <Link href="#">3</Link>
+              </li>
+              <li>
+                <Link href="#" className="dot">
+                  ...
+                </Link>
+              </li>
+              <li>
+                <Link href="#">12</Link>
+              </li>
+              <li>
+                <Link href="#" className="active">
+                  Next <i className="fa-solid fa-angle-right ms-2"></i>{" "}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </section>
   );
