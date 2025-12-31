@@ -96,7 +96,7 @@ export default function SecondSignInPage() {
 
                     {/* REMEMBER + FORGOT */}
                     <div className="account__check">
-                      <div className="account__check-remember">
+                      <div className="account__check-remember d-flex align-items-center">
                         <input
                           type="checkbox"
                           className="form-check-input"
@@ -104,7 +104,7 @@ export default function SecondSignInPage() {
                         />
                         <label
                           htmlFor="remember-check"
-                          className="form-check-label"
+                          className="form-check-label ms-1"
                         >
                           Remember me
                         </label>
@@ -114,6 +114,7 @@ export default function SecondSignInPage() {
                         <Link href="/forgot-pass-2">Forgot Password?</Link>
                       </div>
                     </div>
+
 
                     <button
                       type="submit"
