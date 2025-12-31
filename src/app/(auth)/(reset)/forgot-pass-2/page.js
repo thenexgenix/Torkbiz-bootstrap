@@ -15,6 +15,44 @@ export default function secondResetPassword() {
   }, []);
 
   return (
+    <>
+    {/* Light / Dark Switch (same as Navbar) */}
+    <div className="lightdark-switch">
+      <span
+        className="dark-btn"
+        onClick={() => {
+          const html = document.documentElement;
+          const current = html.getAttribute("data-bs-theme") || "light";
+          const next = current === "light" ? "dark" : "light";
+          html.setAttribute("data-bs-theme", next);
+          localStorage.setItem("theme", next);
+        }}
+        style={{
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor:
+            document.documentElement.getAttribute("data-bs-theme") === "light"
+              ? "#000"
+              : "#fff",
+        }}
+      >
+        <Image
+          src={
+            typeof window !== "undefined" &&
+            document.documentElement.getAttribute("data-bs-theme") === "dark"
+              ? "/images/icon/sun.svg"
+              : "/images/icon/moon.svg"
+          }
+          alt="theme toggle"
+          width={20}
+          height={20}
+          className="swtich-icon"
+        />
+      </span>
+    </div>
+
     <section className="account padding-top padding-bottom bg-color-6">
       <div className="container">
         <div
@@ -98,5 +136,6 @@ export default function secondResetPassword() {
         </div>
       </div>
     </section>
+    </>
   );
 }
