@@ -12,14 +12,12 @@ export default function BlogSidebarPage() {
   return (
     <>
       {/* ================= Page Header ================= */}
-      <section className="page-header bg-color-1 ">
+      <section className="page-header bg-color-1">
         <div className="container">
           <div
             className="page-header__content"
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-offset="120"
-            data-aos-delay="50"
           >
             <h2>Blog - side bar</h2>
             <nav
@@ -68,8 +66,7 @@ export default function BlogSidebarPage() {
                       key={blog.id}
                       blog={blog}
                       columnClass="col-sm-6"
-                      aosDuration={index % 2 === 0 ? 1000 : 1200}
-                      aosDelay={index * 80}
+                      aosDelay={index % 2 === 0 ? 1000 : 1200}
                     />
                   ))}
                 </div>
