@@ -26,7 +26,7 @@ export default function SignUpPage() {
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item " aria-current="page">
                   Register
                 </li>
               </ol>
@@ -95,7 +95,7 @@ export default function SignUpPage() {
                           alt="google icon"
                           width={20}
                           height={20}
-                          style={{ width: "auto", height: "auto" }}
+                          
                         />
                       </span>
                       Sign in with google

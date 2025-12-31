@@ -19,7 +19,7 @@ export default function BlogDetailsPage() {
           <div
             className="page-header__content"
             data-aos="fade-right"
-            data-aos-duration="1000"
+           
           >
             <h2>Blog details</h2>
             <nav

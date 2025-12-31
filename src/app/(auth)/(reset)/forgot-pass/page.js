@@ -26,7 +26,7 @@ export default function ResetPasswordPage() {
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item " aria-current="page">
                   Reset Password
                 </li>
               </ol>

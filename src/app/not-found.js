@@ -36,7 +36,7 @@ export default function NotFound() {
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
+                <li className="breadcrumb-item " aria-current="page">
                   404 page
                 </li>
               </ol>
@@ -89,8 +89,8 @@ export default function NotFound() {
                 <Image
                   src="/images/others/error.png"
                   alt="404 image"
-                  width={500}
-                  height={350}
+                  width={900}
+                  height={650}
                   style={{ width: "auto", height: "auto" }}
                   priority
                 />

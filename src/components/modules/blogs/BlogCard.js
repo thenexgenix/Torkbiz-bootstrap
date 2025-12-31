@@ -3,16 +3,18 @@ import Image from "next/image";
 
 export default function BlogCard({
   blog,
-  aosDelay = 800,
-  columnClass = "col-sm-6 col-lg-4", 
+  aosDelay = 0,
+  aosDuration = 1000,
+  columnClass = "col-sm-6 col-lg-4",
 }) {
   return (
-    <div
-      className={columnClass}
-      data-aos="fade-up"
-      data-aos-duration={aosDelay}
-    >
-      <div className="blog__item">
+    <div className={columnClass}>
+      <div
+        className="blog__item"
+        data-aos="fade-up"
+        data-aos-delay={aosDelay}
+        data-aos-duration={aosDuration}
+      >
         <div className="blog__item-inner">
           <div className="blog__thumb">
             <Image
@@ -21,8 +23,6 @@ export default function BlogCard({
               width={400}
               height={260}
               className="w-100"
-              style={{ width: "auto", height: "auto" }}
-              priority={true}
             />
           </div>
 
@@ -33,7 +33,7 @@ export default function BlogCard({
               </span>
             </div>
 
-            <h5 className="10">
+            <h5 className="mb-10">
               <Link href={`/blogs/${blog.slug}`}>{blog.title}</Link>
             </h5>
 
@@ -46,8 +46,6 @@ export default function BlogCard({
                   alt={blog.author}
                   width={40}
                   height={40}
-                  style={{ width: "auto", height: "auto" }}
-                  priority={true}
                 />
               </div>
               <div className="blog__writer-designation">
