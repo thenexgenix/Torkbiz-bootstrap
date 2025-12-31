@@ -82,7 +82,7 @@ export default function PricingSection() {
                     <div className="pricing__item-middle">
                       <ul className="pricing__list">
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -94,7 +94,7 @@ export default function PricingSection() {
                           Weekly online meeting
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -106,7 +106,7 @@ export default function PricingSection() {
                           Unlimited learning access
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -118,7 +118,7 @@ export default function PricingSection() {
                           24/7 technical support
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -164,7 +164,7 @@ export default function PricingSection() {
                     <div className="pricing__item-middle">
                       <ul className="pricing__list">
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -176,7 +176,7 @@ export default function PricingSection() {
                           Weekly online meeting
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -188,7 +188,7 @@ export default function PricingSection() {
                           Unlimited learning access
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -200,7 +200,7 @@ export default function PricingSection() {
                           24/7 technical support
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -212,7 +212,7 @@ export default function PricingSection() {
                           Personal training
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -261,7 +261,7 @@ export default function PricingSection() {
                     <div className="pricing__item-middle">
                       <ul className="pricing__list">
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -273,7 +273,7 @@ export default function PricingSection() {
                           With all standard features
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -285,7 +285,7 @@ export default function PricingSection() {
                           Unlimited learning access
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"
@@ -297,7 +297,7 @@ export default function PricingSection() {
                           24/7 technical support
                         </li>
                         <li className="pricing__list-item">
-                          <span>
+                          <span style={{ marginRight: "8px" }}>
                             <Image
                               src={getCheckIcon()}
                               alt="check"

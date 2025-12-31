@@ -7,9 +7,6 @@ export default function serviceDetails() {
     <div>
       <Header />
       <ServiceDetails/>
-
-
-
     </div>
   )
 }

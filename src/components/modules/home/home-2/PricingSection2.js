@@ -120,7 +120,7 @@ export default function PricingSection2() {
                 data-aos="fade-up"
                 data-aos-duration="1000"
               >
-                <div className="pricing__item-inner active">
+                <div className="pricing__item-inner">
                   <div className="pricing__item-content">
                     {/* Top Part */}
                     <div className="pricing__item-top">

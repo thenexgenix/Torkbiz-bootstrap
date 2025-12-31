@@ -10,7 +10,7 @@ export default function teamDetails() {
       <TeamDetailsSection/>
 
 
-      <CTASection />
+      <CTASection className="bg-color-3" />
     </div>
   )
 }

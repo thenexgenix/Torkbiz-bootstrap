@@ -1,11 +1,51 @@
 "use client";
 
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+const Counter = ({ end, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
 
-export default function About() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          let start = 0;
+          const step = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const percentage = Math.min(progress / duration, 1);
+            setCount(Math.floor(percentage * end));
+
+            if (progress < duration) {
+              window.requestAnimationFrame(step);
+            }
+          };
+          window.requestAnimationFrame(step);
+        } else {
+          setCount(0);
+        }
+      },
+      { threshold: 0.5 } 
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) observer.disconnect();
+    };
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}</span>;
+};
+
+//Main About Component
+export default function About({ className }) {
   return (
-    <section className="about about--style1 bg-color-2">
+    <section className={`about about--style1 ${className || "bg-color-2"}`}>
       <div className="container">
         <div className="about__wrapper">
           <div className="row g-5 align-items-center">
@@ -26,32 +66,29 @@ export default function About() {
                       style={{ width: "100%", height: "auto" }}
                       priority
                     />
+
+                    {/* Top Left Floating Item */}
                     <div className="floating-content__top-left">
                       <div className="floating-content__item">
                         <h3>
-                          {" "}
                           <span
                             className="purecounter"
-                            data-purecounter-start="0"
-                            data-purecounter-end="10"
+                            style={{ marginRight: "10px" }}
                           >
-                            30
+                            <Counter end={10} duration={1500} />
                           </span>
                           Years
                         </h3>
                         <p>Consulting Experience</p>
                       </div>
                     </div>
+
+                    {/* Bottom Right Floating Item */}
                     <div className="floating-content__bottom-right">
                       <div className="floating-content__item">
                         <h3>
-                          {" "}
-                          <span
-                            className="purecounter"
-                            data-purecounter-start="0"
-                            data-purecounter-end="25"
-                          >
-                            25
+                          <span className="purecounter">
+                            <Counter end={25} duration={1500} />
                           </span>
                           K+
                         </h3>

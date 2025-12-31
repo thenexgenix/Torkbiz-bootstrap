@@ -7,9 +7,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 
-export default function TestimonialSection2() {
+export default function TestimonialSection2({className}) {
   return (
-    <section className="testimonial padding-top padding-bottom bg-color-3">
+    <section
+      className={`testimonial padding-top padding-bottom ${
+        className || "bg-color-3"
+      }`}
+    >
       <div className="container">
         <div className="section-header d-flex align-items-center justify-content-between">
           <div className="section-header__content">
@@ -69,7 +73,6 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                      
                           <Image
                             src="/images/testimonial/3.png"
                             alt="author"
@@ -107,7 +110,6 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                      
                           <Image
                             src="/images/testimonial/4.png"
                             alt="author"
@@ -145,7 +147,6 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                         
                           <Image
                             src="/images/testimonial/5.png"
                             alt="author"
@@ -183,7 +184,6 @@ export default function TestimonialSection2() {
                     <div className="testimonial__footer">
                       <div className="testimonial__author">
                         <div className="testimonial__author-thumb">
-                        
                           <Image
                             src="/images/testimonial/3.png"
                             alt="author"

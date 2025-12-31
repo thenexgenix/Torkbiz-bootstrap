@@ -9,7 +9,7 @@ export default function secondteam() {
     <div>
       <Header />
       <TeamSection2 />
-      <CTASection />
+      <CTASection className="bg-color-3" />
     </div>
   );
 }

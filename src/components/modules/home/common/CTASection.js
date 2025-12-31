@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 
-export default function CTASection() {
+export default function CTASection({className}) {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   return (
-    <section className="cta cta--style1 padding-top padding-bottom of-hidden bg-color-2">
+    <section
+      className={`cta cta--style1 padding-top padding-bottom of-hidden ${
+        className || "bg-color-2"
+      }`}
+    >
       <div className="container">
         <div className="cta__wrapper">
           <div className="row gx-4">

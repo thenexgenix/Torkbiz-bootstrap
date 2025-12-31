@@ -2,8 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function TeamSection() {
+  const pathname = usePathname();
+  const isTeamPage = pathname === "/team-1";
+
   const teamMembers = [
     {
       name: "Dianne Russell",
@@ -46,6 +50,9 @@ export default function TeamSection() {
       image: "/images/team/8.png",
     },
   ];
+  const displayedMembers = isTeamPage
+    ? [...teamMembers, ...teamMembers.slice(0, 4)]
+    : teamMembers;
 
   return (
     <section className="team padding-top padding-bottom bg-color-2">
@@ -61,7 +68,7 @@ export default function TeamSection() {
       <div className="container">
         <div className="team__wrapper">
           <div className="row g-4 align-items-center">
-            {teamMembers.map((member, index) => (
+            {displayedMembers.map((member, index) => (
               <div key={index} className="col-sm-6 col-lg-3">
                 <div
                   className="team__item team__item--shape"
@@ -98,8 +105,8 @@ export default function TeamSection() {
                         <Image
                           src="/images/team/icon/1.png"
                           alt="shape-icon"
-                          width={20}
-                          height={20}
+                          width={45}
+                          height={45}
                           style={{ width: "auto", height: "auto" }}
                         />
                       </span>
@@ -107,8 +114,8 @@ export default function TeamSection() {
                         <Image
                           src="/images/team/icon/2.png"
                           alt="shape-icon"
-                          width={20}
-                          height={20}
+                          width={45}
+                          height={45}
                           style={{ width: "auto", height: "auto" }}
                         />
                       </span>
@@ -116,8 +123,8 @@ export default function TeamSection() {
                         <Image
                           src="/images/team/icon/3.png"
                           alt="shape-icon"
-                          width={20}
-                          height={20}
+                          width={45}
+                          height={45}
                           style={{ width: "auto", height: "auto" }}
                         />
                       </span>
@@ -126,16 +133,55 @@ export default function TeamSection() {
                 </div>
               </div>
             ))}
-
+          </div>
+          {isTeamPage ? (
+            <div
+              className="paginations"
+              data-aos="fade-up"
+              data-aos-duration="1200"
+            >
+              <ul className="lab-ul d-flex flex-wrap justify-content-center mb-1">
+                <li>
+                  <Link href="#">
+                    <i className="fa-solid fa-angle-left me-2"></i> Prev
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="active">
+                    1
+                  </Link>
+                </li>
+                <li className="d-none d-sm-block">
+                  <Link href="#">2</Link>
+                </li>
+                <li className="d-none d-sm-block">
+                  <Link href="#">3</Link>
+                </li>
+                <li>
+                  <Link href="#" className="dot">
+                    ...
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#">12</Link>
+                </li>
+                <li>
+                  <Link href="#" className="active">
+                    Next <i className="fa-solid fa-angle-right ms-2"></i>{" "}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
             <div className="text-center">
               <Link
-                href="/team"
+                href="/team-1"
                 className="trk-btn trk-btn--border trk-btn--primary1 mt-25"
               >
                 View more{" "}
               </Link>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

@@ -32,8 +32,8 @@ export default function Blog() {
     {
       id: 3,
       image: "/images/blog/3.png",
-      category: "business",
-      title: "How to increase sales?",
+      category: "Business",
+      title: "How To Increase Sales?",
       desc: "Hey there! Struggling with your business off Need someone to guide you? Contact me, I'm an experienced consultant.",
       authorImg: "/images/blog/author/3.png",
       authorName: "Hulya Aydin",
@@ -129,7 +129,9 @@ export default function Blog() {
                         <Link href="/blog-details">{blog.title}</Link>
                       </h5>
 
-                      <p className="mb-15">{blog.desc}</p>
+                      <p className="mb-15" style={{ marginRight: "15px" }}>
+                        {blog.desc}
+                      </p>
 
                       <div className="blog__writer">
                         <div className="blog__writer-thumb">

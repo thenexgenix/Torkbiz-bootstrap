@@ -10,8 +10,8 @@ export default function FaqSection2() {
 
   useEffect(() => {
     AOS.init({
-      once: true,
-      duration: 1000,
+      once: false,
+      duration: 0,
     });
   }, []);
   const toggleAccordion1 = (id) => {

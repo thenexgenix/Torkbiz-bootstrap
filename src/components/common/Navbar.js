@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Moon, Sun } from "lucide-react";
+
 
 export default function Navbar() {
   const [menuActive, setMenuActive] = useState(false);
@@ -13,7 +13,7 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
-  //  THEME 
+  //  THEME
   const applyTheme = (theme) => {
     document.documentElement.setAttribute("data-bs-theme", theme);
   };
@@ -218,18 +218,22 @@ export default function Navbar() {
                     }}
                   >
                     {theme === "light" ? (
-                      <Moon
-                        size={20}
-                        color="#ffffff"
-                        fill="#ffffff"
+                      <Image
+                        src="/images/icon/moon.svg"
+                        alt="Dark mode"
+                        width={20}
+                        height={20}
                         className="swtich-icon"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     ) : (
-                      <Sun
-                        size={20}
-                        color="#000000"
-                        fill="#000000"
+                      <Image
+                        src="/images/icon/sun.svg"
+                        alt="Light mode"
+                        width={20}
+                        height={20}
                         className="swtich-icon"
+                        style={{ width: "auto", height: "auto" }}
                       />
                     )}
                   </span>

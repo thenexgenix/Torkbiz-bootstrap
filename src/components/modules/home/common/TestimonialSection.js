@@ -68,6 +68,7 @@ export default function TestimonialSection() {
             className="testimonial__wrapper"
             data-aos="fade-up"
             data-aos-duration="1000"
+            data-aos-once="false"
           >
             <Swiper
               className="testimonial__slider"
@@ -94,11 +95,30 @@ export default function TestimonialSection() {
               }}
             >
               {testimonials.map((item) => (
-                <SwiperSlide key={item.id}>
-                  <div className="testimonial__item testimonial__item--style1">
-                    <div className="testimonial__item-inner">
-                      <div className="testimonial__item-content">
-                        <p className="mb-0">{item.text}</p>
+                <SwiperSlide key={item.id} style={{ height: "auto" }}>
+                  <div
+                    className="testimonial__item testimonial__item--style1"
+                    style={{ height: "100%" }}
+                  >
+                    <div
+                      className="testimonial__item-inner"
+                      style={{
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <div
+                        className="testimonial__item-content"
+                        style={{
+                          height: "100%",
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <p className="mb-0" style={{ flex: "1" }}>
+                          {item.text}
+                        </p>
                         <div className="testimonial__footer">
                           <div className="testimonial__author">
                             <div className="testimonial__author-thumb">

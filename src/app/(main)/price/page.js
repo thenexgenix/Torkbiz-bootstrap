@@ -10,8 +10,8 @@ export default function Price() {
       
        <Header/>
        <PricingSection />
-      <TestimonialSection />
-      <CTASection/>
+       <TestimonialSection />
+       <CTASection/>
     </div>
   )
 }
