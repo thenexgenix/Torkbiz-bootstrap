@@ -1,28 +1,7 @@
-"use client";
-
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-// NOTE: You cannot export metadata from a "use client" component.
-// Move this to your layout.js or a parent page.js file.
-/* export const metadata = {
-  title: "Contact Us | Torkbiz",
-};
-*/
 
 export default function ContactPage() {
-  // Initialize AOS animation
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true, // Animation happens once per page load
-    });
-    AOS.refresh(); // Refresh AOS to detect new elements
-  }, []);
-
   return (
     <>
       {/* ================= Page Header ================= */}
@@ -43,42 +22,26 @@ export default function ContactPage() {
                 <li className="breadcrumb-item">
                   <Link href="/">Home</Link>
                 </li>
-                <li className="breadcrumb-item active" aria-current="page">
-                  Contact
-                </li>
+                <li className="breadcrumb-item active">Contact</li>
               </ol>
             </nav>
           </div>
 
-          {/* Shapes */}
           <div className="page-header__shape">
-            <span className="page-header__shape-item page-header__shape-item--1">
-              <Image
-                src="/images/icon/page-header/1.png"
-                alt="shape"
-                width={60}
-                height={60}
-                style={{ width: "auto", height: "auto" }}
-              />
-            </span>
-            <span className="page-header__shape-item page-header__shape-item--2">
-              <Image
-                src="/images/icon/page-header/2.png"
-                alt="shape"
-                width={60}
-                height={60}
-                style={{ width: "auto", height: "auto" }}
-              />
-            </span>
-            <span className="page-header__shape-item page-header__shape-item--3">
-              <Image
-                src="/images/icon/page-header/3.png"
-                alt="shape"
-                width={60}
-                height={60}
-                style={{ width: "auto", height: "auto" }}
-              />
-            </span>
+            {[1, 2, 3].map((n) => (
+              <span
+                key={n}
+                className={`page-header__shape-item page-header__shape-item--${n}`}
+              >
+                <Image
+                  src={`/images/icon/page-header/${n}.png`}
+                  alt="shape"
+                  width={60}
+                  height={60}
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </span>
+            ))}
           </div>
         </div>
       </section>
@@ -104,109 +67,76 @@ export default function ContactPage() {
 
                     <ul className="social">
                       <li className="social__item">
-                        <Link
-                          href="#"
-                          className="social__link social__link--style1"
-                        >
+                        <Link href="#" className="social__link social__link--style1">
                           <i className="fab fa-facebook-f"></i>
                         </Link>
                       </li>
                       <li className="social__item">
-                        <Link
-                          href="#"
-                          className="social__link social__link--style1"
-                        >
+                        <Link href="#" className="social__link social__link--style1">
                           <i className="fab fa-instagram"></i>
                         </Link>
                       </li>
                       <li className="social__item">
-                        <Link
-                          href="#"
-                          className="social__link social__link--style1"
-                        >
+                        <Link href="#" className="social__link social__link--style1">
                           <i className="fab fa-linkedin-in"></i>
                         </Link>
                       </li>
                       <li className="social__item d-sm-none d-xl-block">
-                        <Link
-                          href="#"
-                          className="social__link social__link--style1"
-                        >
+                        <Link href="#" className="social__link social__link--style1">
                           <i className="fab fa-youtube"></i>
                         </Link>
                       </li>
                       <li className="social__item d-sm-none d-xl-block">
-                        <Link
-                          href="#"
-                          className="social__link social__link--style1"
-                        >
+                        <Link href="#" className="social__link social__link--style1">
                           <i className="fab fa-twitter"></i>
                         </Link>
                       </li>
                     </ul>
                   </div>
 
-                  {/* Contact Details */}
                   <div className="contact__details">
-                    <div className="contact__item">
-                      <div className="contact__item-inner">
-                        <div className="contact__item-thumb">
-                          <span>
-                            <Image
-                              src="/images/contact/1.png"
-                              alt="phone"
-                              width={40}
-                              height={40}
-                              style={{ width: "auto", height: "auto" }}
-                            />
-                          </span>
-                        </div>
-                        <div className="contact__item-content">
-                          <p>0917749254</p>
-                          <p>0983888611</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="contact__item">
-                      <div className="contact__item-inner">
-                        <div className="contact__item-thumb">
-                          <span>
-                            <Image
-                              src="/images/contact/2.png"
-                              alt="email"
-                              width={40}
-                              height={40}
-                              style={{ width: "auto", height: "auto" }}
-                            />
-                          </span>
-                        </div>
-                        <div className="contact__item-content">
-                          <p>torkbiz@gmail.com</p>
-                          <p>hello@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="contact__item">
-                      <div className="contact__item-inner">
-                        <div className="contact__item-thumb">
-                          <span>
-                            <Image
-                              src="/images/contact/3.png"
-                              alt="location"
-                              width={40}
-                              height={40}
-                              style={{ width: "auto", height: "auto" }}
-                            />
-                          </span>
-                        </div>
-                        <div className="contact__item-content">
-                          <p>88 Sheridan Street</p>
-                          <p>534 Victoria Trail</p>
+                    {[1, 2, 3].map((n) => (
+                      <div
+                        key={n}
+                        className="contact__item"
+                        data-aos="fade-right"
+                        data-aos-duration={900 + n * 100}
+                      >
+                        <div className="contact__item-inner">
+                          <div className="contact__item-thumb">
+                            <span>
+                              <Image
+                                src={`/images/contact/${n}.png`}
+                                alt="contact"
+                                width={40}
+                                height={40}
+                                style={{ width: "auto", height: "auto" }}
+                              />
+                            </span>
+                          </div>
+                          <div className="contact__item-content">
+                            {n === 1 && (
+                              <>
+                                <p>0917749254</p>
+                                <p>0983888611</p>
+                              </>
+                            )}
+                            {n === 2 && (
+                              <>
+                                <p>torkbiz@gmail.com</p>
+                                <p>hello@gmail.com</p>
+                              </>
+                            )}
+                            {n === 3 && (
+                              <>
+                                <p>88 Sheridan Street</p>
+                                <p>534 Victoria Trail</p>
+                              </>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -218,20 +148,12 @@ export default function ContactPage() {
                     <div className="row g-4">
                       <div className="col-12">
                         <label className="form-label">Name</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          placeholder="Full Name"
-                        />
+                        <input className="form-control" placeholder="Full Name" />
                       </div>
 
                       <div className="col-12">
                         <label className="form-label">Email</label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          placeholder="Email here"
-                        />
+                        <input className="form-control" placeholder="Email here" />
                       </div>
 
                       <div className="col-12">
